@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".MainActivity" android:orientation="vertical" android:layout_margin="5dp"
+              android:padding="5dp" android:layout_span="2">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/candidate_fullname"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" android:id="@+id/CandidateName_TextView"
+                    android:contentDescription="@string/candidate_name_textview_details" android:textSize="24sp"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="371dp" app:srcCompat="@drawable/shimon"
+                    android:id="@+id/CandidateImage_ImageView"
+                    tools:srcCompat="@drawable/shimon_v24" android:contentDescription="@string/candidate_fullname"
+                    android:background="@android:color/darker_gray" android:scaleType="fitCenter"
+                    android:cropToPadding="false" android:layout_margin="4dp" android:padding="4dp"/>
+            <Button
+                    android:text="@string/work_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/WorkHistory_Button"/>
+            <Button
+                    android:text="@string/call_shimon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/CallShimon_Button"/>
+            <Button
+                    android:text="@string/email_shimon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/EmailShimon_Button"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
