@@ -32,5 +32,17 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        var emailButton = findViewById<Button>(R.id.EmailShimon_Button)
+        emailButton.setOnClickListener {
+            println("Email Shimon!")
+
+            var emailIntent = Intent(Intent.ACTION_SEND)
+            emailIntent.setType("plain/text")
+            emailIntent.putExtra(Intent.EXTRA_EMAIL,"shimon@shawonarefin.com")
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Resume from the app")
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "I liked your email")
+            startActivity(emailIntent)
+        }
+
     }
 }
