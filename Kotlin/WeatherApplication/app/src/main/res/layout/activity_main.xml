@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity" android:id="@+id/mainLayout_ConstraintLayout">
+        tools:context=".ui.MainActivity" android:id="@+id/mainLayout_ConstraintLayout">
     <TextView
             android:id="@+id/weather_TextView"
             android:text="@string/textView_Weather"

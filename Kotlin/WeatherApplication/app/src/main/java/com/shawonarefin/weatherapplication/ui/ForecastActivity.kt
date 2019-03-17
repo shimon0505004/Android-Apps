@@ -1,9 +1,12 @@
-package com.shawonarefin.weatherapplication
+package com.shawonarefin.weatherapplication.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import com.shawonarefin.weatherapplication.R
+import com.shawonarefin.weatherapplication.Weather
+import com.shawonarefin.weatherapplication.WeatherRetriever
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
