@@ -3,4 +3,5 @@
     <string name="textView_Weather">Weather</string>
     <string name="new_york_city">New York City</string>
     <string name="get_forecast">Get Forecast</string>
+    <string name="open_weather_map_api_key">"13683acd1abd5bf44d92d094a3a9b9ba"</string>
 </resources>
