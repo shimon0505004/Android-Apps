@@ -3,7 +3,9 @@ package com.shawonarefin.weatherapplication
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.ListAdapter
 import android.widget.ListView
+import kotlinx.android.synthetic.main.activity_forecast.*
 
 class ForecastActivity : AppCompatActivity() {
 
@@ -11,30 +13,20 @@ class ForecastActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forecast)
 
-        var listView = findViewById<ListView>(R.id.forecast_ListView)
-        var randomThings = listOf<String>("Hello"
-            , "How Are You"
-            , "I like Cheese"
-            , "Hello"
-            , "How Are You"
-            , "I like Cheese"
-            , "Hello"
-            , "How Are You"
-            , "I like Cheese"
-            , "Hello"
-            , "How Are You"
-            , "I like Cheese"
-            , "Hello"
-            , "How Are You"
-            , "I like Cheese"
-            , "Hello"
-            , "How Are You"
-            , "I like Cheese"
-            , "Hello"
-            , "How Are You"
-            , "I like Cheese"
+        var movieListView = findViewById<ListView>(R.id.forecast_ListView)
+        var movieList = listOf<String>(
+            "Veer Zaara"
+        ,   "Aashiqui"
+        ,   "Saving Private Ryan"
+        ,   "Jack of all trades"
+        ,   "Beam me up scotty"
+        ,   "Find me and kill"
+        ,   "A good day to die"
+        ,   "The notebook"
+        ,   "Alexi Krilenko"
+        ,   "A man apart"
         )
-        var adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1,randomThings)
-        listView.adapter = adapter
+        var movieListAdapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,movieList)
+        movieListView.adapter = movieListAdapter
     }
 }
