@@ -3,9 +3,7 @@ package com.shawonarefin.weatherapplication
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import android.widget.ListAdapter
 import android.widget.ListView
-import kotlinx.android.synthetic.main.activity_forecast.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -34,15 +32,15 @@ class ForecastActivity : AppCompatActivity() {
 
 
         var retriever = WeatherRetriever()
-        val callback = object : Callback<WeatherQuery>{
+        val callback = object : Callback<Weather>{
 
-            override fun onResponse(call: Call<WeatherQuery>, response: Response<WeatherQuery>) {
+            override fun onResponse(call: Call<Weather>, response: Response<Weather>) {
                 println("We have a response")
                 println(response.body())
 
             }
 
-            override fun onFailure(call: Call<WeatherQuery>, t: Throwable) {
+            override fun onFailure(call: Call<Weather>, t: Throwable) {
                 println("It failed :(")
             }
 

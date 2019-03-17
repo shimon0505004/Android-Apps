@@ -8,10 +8,10 @@ import retrofit2.http.GET
 
 interface WeatherAPI{
     @GET("bins/cu8xy")
-    fun getForecast() : Call<WeatherQuery>
+    fun getForecast() : Call<Weather>
 }
 
-class WeatherQuery
+class Weather
 
 
 class WeatherRetriever{
@@ -22,7 +22,7 @@ class WeatherRetriever{
         service = retrofit.create(WeatherAPI::class.java)
     }
 
-    fun getForecast(callback: Callback<WeatherQuery>){
+    fun getForecast(callback: Callback<Weather>){
         val call = service.getForecast()
         call.enqueue(callback)
     }
