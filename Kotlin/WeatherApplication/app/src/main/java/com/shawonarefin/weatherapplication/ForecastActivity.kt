@@ -34,13 +34,13 @@ class ForecastActivity : AppCompatActivity() {
         var retriever = WeatherRetriever()
         val callback = object : Callback<Weather>{
 
-            override fun onResponse(call: Call<Weather>, response: Response<Weather>) {
+            override fun onResponse(call: Call<Weather>?, response: Response<Weather>?) {
                 println("We have a response")
-                println(response.body())
+                println(response)
 
             }
 
-            override fun onFailure(call: Call<Weather>, t: Throwable) {
+            override fun onFailure(call: Call<Weather>?, t: Throwable?) {
                 println("It failed :(")
             }
 
