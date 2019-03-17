@@ -8,25 +8,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-const val API_KEY = "57a2b6efb27642c888e151513191703"
-
-//http://api.apixu.com/v1/forecast.json?key=57a2b6efb27642c888e151513191703&q=07112&days=7
-
-interface WeatherAPI{
-    @GET("forecast.json")
-    fun getForecast() (
-        @Query("q") location: String,
-        @Query("q") languageCode: String = "en",
-    ): Call<Weather>
-
-
-}
-
-class Weather(val forecast : WeatherForecast)
-class WeatherForecast(val forecastday : List<WeatherForecastByDay>)
-class WeatherForecastByDay(val day: WeatherOnDay)
-class WeatherOnDay(val condition: WeatherCondition)
-class WeatherCondition(val text: String)
 
 class WeatherRetriever{
     val service : WeatherAPI
