@@ -1,7 +1,10 @@
 package com.shawonarefin.weatherapplication.data.Response
 
+import com.shawonarefin.weatherapplication.data.CurrentWeekWeatherResponse
+import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Query
+
 
 
 const val API_KEY = "57a2b6efb27642c888e151513191703"
@@ -16,5 +19,5 @@ interface ApixuWeatherApiService {
     fun getWeatherForecast(
         @Query("q") location: String,
         @Query("lang") languageCode: String = "en"
-    )
+    ): Deferred<CurrentWeekWeatherResponse>
 }
