@@ -5,8 +5,12 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.shawonarefin.weatherapplication.R
-import com.shawonarefin.weatherapplication.Weather
-import com.shawonarefin.weatherapplication.WeatherRetriever
+import com.shawonarefin.weatherapplication.data.CurrentWeekWeatherResponse
+import com.shawonarefin.weatherapplication.data.Response.ApixuWeatherApiService
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import okhttp3.Dispatcher
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -34,20 +38,12 @@ class ForecastActivity : AppCompatActivity() {
         movieListView.adapter = movieListAdapter
 
 
-        var retriever = WeatherRetriever()
-        val callback = object : Callback<Weather>{
-
-            override fun onResponse(call: Call<Weather>?, response: Response<Weather>?) {
-                println("We have a response")
-                println(response)
-
-            }
-
-            override fun onFailure(call: Call<Weather>?, t: Throwable?) {
-                println("It failed :(")
-            }
+        var apiService = ApixuWeatherApiService()
+        GlobalScope.launch(Dispatchers.Main) {
+            val currentWeatherResponse = apiService.getWeatherForecast("Dhaka").await()
+            println(currentWeatherResponse.location.toString())
 
         }
-        retriever.getForecast(callback)
     }
 }
+
