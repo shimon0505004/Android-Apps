@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">CoolResume</string>
+    <string name="candidate_fullname">Shaikh Shawon Arefin Shimon</string>
+    <string name="candidate_name_textview_details">Candidate Name</string>
+    <string name="work_history">WORK HISTORY</string>
+    <string name="call_shimon">CALL SHIMON</string>
+    <string name="email_shimon">EMAIL SHIMON</string>
+    <string name="work_history_description">
+        "Lecturer, Department of Electrical &amp; Computer Engineering (ECE)
+        North South University (NSU)
+        Dhaka, Bangladesh
+        May 2018 – Present
+        • Teaching CS courses such as data structures, computer architecture, software development, software testing as a core faculty of Computer Science since Summer 2018.
+        • Working as the career coordinator for the School of Engineering and Physical Sciences (SEPS) to organize industrial workshops, on-campus recruitments, industry talks and professional grooming sessions for engineering students at NSU.
+
+        R&amp;D Software Engineer 2
+        June 2016 – Feb 2018
+        Keysight Technologies
+        Santa Rosa, CA, USA
+        • Worked on developing Electronic Design Automation (EDA) software products in C++11/14, QT and python using test-driven development (TDD) methodology following Agile/Scrum principles.
+        • Ported existing features from proprietary legacy AEL code base to modern C++.
+        • Implemented and rolled out new UI features in Advanced Design System (ADS) 2017.
+        • Performed defect tracking and resolution using TFS and Atlassian toolchains.
+
+        Graduate Research Assistant
+        May 2015 – May 2016
+        HCI Lab, Colorado State University
+        Fort Collins, CO, USA
+        • As a research assistant under Dr. Jaime Ruiz, researched on mobile and wearable interaction, and published paper as first authors in MobileHCI’15 and CHI’16 conferences.
+        • Developed video frame annotation tool for gesture classification using C#, and application for recording gesture sensor data using android.
+
+        Graduate Teaching Assistant
+        August 2014 – May 2015
+        Computer Science Department, Colorado State University
+        Fort Collins, CO, USA
+        • Instructed undergrad class for OOP language and Computer Organization.
+        • Prepared and graded assignments &amp; tests, proctored exams and provided student support.
+
+        Senior Software Engineer / Software Engineer
+        March 2011 – July 2014
+        Samsung R&amp;D Institute, Bangladesh
+        Dhaka, Bangladesh
+        • Developed regional customization features for C/ARM based feature phone OS and Android phones.
+        • Troubleshooted platform integration and after-market issues for native multimedia applications.
+        • Worked as a liaison engineer in UAE, India and Korea for project collaboration.
+        • Received best employee of the month award (March 2013) for engineering work."
+    </string>
+    <string name="work_history_small">Work History</string>
+</resources>

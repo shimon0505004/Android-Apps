@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">WeatherApplication</string>
+    <string name="textView_Weather">Weather</string>
+    <string name="new_york_city">New York City</string>
+    <string name="get_forecast">Get Forecast</string>
+</resources>
