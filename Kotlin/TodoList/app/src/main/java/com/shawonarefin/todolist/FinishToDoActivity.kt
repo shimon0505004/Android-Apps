@@ -1,5 +1,7 @@
 package com.shawonarefin.todolist
 
+import android.graphics.Typeface
+import android.graphics.Typeface.*
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -30,18 +32,19 @@ class FinishToDoActivity : AppCompatActivity() {
             //title = toDoItem?.name
             val textView = findViewById<TextView>(R.id.todoNameTextView)
             textView.text = toDoItem?.name
+            if(toDoItem?.important!!) textView.typeface = DEFAULT_BOLD
 
             val completeButton = findViewById<Button>(R.id.completeButton)
             completeButton.setOnClickListener {
                 realm.beginTransaction()
-                toDoItem?.deleteFromRealm()
+                toDoItem.deleteFromRealm()
                 realm.commitTransaction()
 
                 finish()
             }
 
         } finally {
-            realm.close();
+            realm.close()
         }
     }
 
