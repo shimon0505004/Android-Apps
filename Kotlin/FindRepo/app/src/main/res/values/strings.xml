@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FindRepo</string>
+    <string name="search">Search</string>
+    <string name="kotlin_json_parser">Kotlin_JSON_Parser</string>
+</resources>
