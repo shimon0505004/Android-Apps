@@ -25,17 +25,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(addIntent)
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         val realm = Realm.getDefaultInstance()
-
         val query = realm.where(ToDoItem::class.java)
         val results = query.findAll()
-
         val listView = findViewById<ListView>(R.id.todoListView)
         val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,results)
-
         listView.adapter = adapter
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
