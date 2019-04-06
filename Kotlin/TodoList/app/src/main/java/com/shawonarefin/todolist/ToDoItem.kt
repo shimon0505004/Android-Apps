@@ -2,7 +2,7 @@ package com.shawonarefin.todolist
 
 import io.realm.RealmObject
 
-public class Dog: RealmObject(){
-    public var name = ""
-    public var age = 0
+open class ToDoItem: RealmObject(){
+    var name:String = ""
+    var important: Boolean = false
 }
