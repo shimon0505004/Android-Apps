@@ -34,10 +34,13 @@ class MainActivity : AppCompatActivity() {
         val query = realm.where(ToDoItem::class.java)
         val results = query.findAll()
         val listView = findViewById<ListView>(R.id.todoListView)
+
         listView.setOnItemClickListener{adapterView, view, index, l ->
             val selectedToDo = results[index]
             val finishIntent = Intent(this,FinishToDoActivity::class.java)
-            finishIntent.putExtra("toDoItem",selectedToDo)
+            finishIntent.putExtra("toDoItem",selectedToDo?.getId())
+            println(selectedToDo?.name)
+            startActivity(finishIntent)
         }
 
         val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,results)

@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import io.realm.Realm
+import java.util.*
 
 class AddTodoActivity : AppCompatActivity() {
 
@@ -26,7 +27,7 @@ class AddTodoActivity : AppCompatActivity() {
             val realm = Realm.getDefaultInstance()
             realm.beginTransaction()
 
-            val toDo = realm.createObject(ToDoItem::class.java)
+            val toDo = realm.createObject(ToDoItem::class.java, UUID.randomUUID().toString())
             toDo.name = editText.text.toString()
             toDo.important = checkBox.isChecked
 
