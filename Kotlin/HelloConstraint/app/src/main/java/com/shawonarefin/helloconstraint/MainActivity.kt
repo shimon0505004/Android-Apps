@@ -1,10 +1,12 @@
 package com.shawonarefin.helloconstraint
 
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,11 +28,15 @@ class MainActivity : AppCompatActivity() {
     fun countUp(view: View){
         mCount++
         mShowCount?.text = mCount.toString()
+        button_count.setBackgroundColor(if(mCount%2==0) Color.BLUE else Color.GREEN)
+        button_zero.setBackgroundColor(Color.MAGENTA)
     }
 
     fun makeZero(view: View){
         mCount = 0
         mShowCount?.text = mCount.toString()
+        button_zero.setBackgroundColor(Color.GRAY)
+        button_count.setBackgroundColor(Color.BLUE)
     }
 
 }
