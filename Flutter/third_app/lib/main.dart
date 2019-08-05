@@ -10,12 +10,17 @@ class application extends StatelessWidget {
     return new MaterialApp(
       home: new Scaffold(
         body: new Container(
-          color: Colors.pink,
           child: new Text('This is my Container'),
           height: 300.0,
           width: 300.0,
           alignment: Alignment.center,
-          padding: const EdgeInsets.all(40.0),
+          padding: const EdgeInsets.all(20.0),
+          decoration: new BoxDecoration(
+            color: Colors.green
+          ),
+          foregroundDecoration: new BoxDecoration(
+            color: Colors.deepOrange
+          ),
         ),
       )
     );
