@@ -8,19 +8,19 @@ class application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      title: "Shimon App",
       home: new Scaffold(
-        body: new Container(
-          child: new Text('This is my Container'),
-          height: 300.0,
-          width: 300.0,
-          alignment: Alignment.center,
-          padding: const EdgeInsets.all(20.0),
-          decoration: new BoxDecoration(
-            color: Colors.green
-          ),
-          foregroundDecoration: new BoxDecoration(
-            color: Colors.deepOrange
-          ),
+        appBar: new AppBar(title: new Text('Row & Column'),),
+        body: new Row(
+          children: <Widget>[
+            new Text('This'),
+            new Text('is'),
+            new Text('Row'),
+            new Text('This'),
+            new Text('This'),
+            new Text('This'),
+            new Text('This'),
+          ],
         ),
       )
     );
