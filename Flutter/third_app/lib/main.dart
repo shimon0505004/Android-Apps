@@ -11,25 +11,30 @@ class application extends StatelessWidget {
       title: "Shimon App",
       home: new Scaffold(
         appBar: new AppBar(title: new Text('Row & Column'),),
-        body: new Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        body: new ListView(
           children: <Widget>[
-            new Text('This'),
-            new Text('is'),
-            new Text('Row'),
-            new Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                new Text('This'),
-                new Text('Is'),
-                new Text('Column'),
-              ],
+            new ListTile(
+              title: new Text('item 1'),
+              trailing: new Icon(Icons.arrow_forward),
             ),
-            new Text('Row'),
-            new Text('Row'),
-            new Text('Row'),
+            new ListTile(
+              title: new Text('item 2'),
+              trailing: new Icon(Icons.arrow_forward),
+            ),
+            new ListTile(
+              title: new Text('item 3'),
+              trailing: new Icon(Icons.arrow_forward),
+            ),
+            new ListTile(
+              title: new Text('item 4'),
+              trailing: new Icon(Icons.arrow_forward),
+            ),
+            new ListTile(
+              title: new Text('item 5'),
+              trailing: new Icon(Icons.arrow_forward),
+            ),
           ],
-        ),
+        )
       )
     );
   }
