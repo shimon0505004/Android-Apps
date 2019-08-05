@@ -12,14 +12,22 @@ class application extends StatelessWidget {
       home: new Scaffold(
         appBar: new AppBar(title: new Text('Row & Column'),),
         body: new Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new Text('This'),
             new Text('is'),
             new Text('Row'),
-            new Text('This'),
-            new Text('This'),
-            new Text('This'),
-            new Text('This'),
+            new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new Text('This'),
+                new Text('Is'),
+                new Text('Column'),
+              ],
+            ),
+            new Text('Row'),
+            new Text('Row'),
+            new Text('Row'),
           ],
         ),
       )
