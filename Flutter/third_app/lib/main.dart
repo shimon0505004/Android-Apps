@@ -8,14 +8,14 @@ class application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Stateless Widget',
       home: new Scaffold(
         body: new Container(
           color: Colors.pink,
-          child: new Container(
-            color: Colors.yellow,
-            margin: const EdgeInsets.all(30.0),
-          ),
+          child: new Text('This is my Container'),
+          height: 300.0,
+          width: 300.0,
+          alignment: Alignment.center,
+          padding: const EdgeInsets.all(40.0),
         ),
       )
     );
